@@ -1,0 +1,3 @@
+1. Rename all Wordle grid elements acc to its respective row-col number.
+2. Rename all the game objects acc of Keyboard Grid->Row 3.
+3. Rename all the keyboard elements Text acc to QWERTY keyboard standard.

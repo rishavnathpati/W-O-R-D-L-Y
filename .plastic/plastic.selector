@@ -1,0 +1,3 @@
+rep "Wordle@patirishavnath@cloud"
+  path "/"
+    smartbranch "/main"
