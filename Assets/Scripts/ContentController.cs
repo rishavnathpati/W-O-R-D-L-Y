@@ -23,6 +23,7 @@ public class ContentController : MonoBehaviour
 
     private void Start()
     {
+        inputController.SetActive(false);
         _gameOverPanelCanvasGroup = gameOverPanel.GetComponent<CanvasGroup>();
         inputField.onValueChanged.AddListener(OnUpdateContent);
         inputField.onSubmit.AddListener(OnSubmit);
@@ -33,17 +34,24 @@ public class ContentController : MonoBehaviour
                 inputController.SetActive(false);
                 keyboard.SetActive(true);
                 break;
-            case DeviceType.Desktop:
-                inputController.SetActive(true);
-                keyboard.SetActive(false);
-                break;
+            // case DeviceType.Desktop:
+            //     inputController.SetActive(true);
+            //     keyboard.SetActive(false);
+            //     break;
             case DeviceType.Unknown:
                 break;
             case DeviceType.Console:
                 break;
+            case DeviceType.Desktop:
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void OnUpdateContent(string msg)
